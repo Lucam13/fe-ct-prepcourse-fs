@@ -22,6 +22,21 @@ function agregarStringInvertida() {
    // Agrega un método al prototipo de "String" que devuelva la misma cadena de caracteres, pero invertida.
    // El método debe llamarse "reverse".
    // [PISTA]: necesitarás utilizar el objeto "this".
+
+   // 'hola'.reverse() = 'aloh'
+   // String.prototype.reverse = function(){
+
+   //    var invertido = ''
+   //    for (var i = this.length - 1; i>= 0; i--){
+
+   //       invertido = invertido + this[i]
+   //    }
+   // }
+
+ String.prototype.reverse = function () {
+   return this.split('').reverse().join('')
+ }
+
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
