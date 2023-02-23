@@ -185,7 +185,7 @@ function mesesDelAño(array) {
       res.push(array[i])
      }
    }
-   if (res.length === 0) return "No se encontraron los meses pedidos"
+   if (res.length < 3) return "No se encontraron los meses pedidos"
    else return res;
 }
 
@@ -193,12 +193,30 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+
+// return [ 0, 6, 12, 18, 24,30...]
+
+   let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+   let res = arr.map(function(element){
+      return element *6;
+   })
+   return res;
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+
+   let arr = []
+
+   for (let i = 0; i<array.length; i++){
+      if(array[i] > 100){
+         arr.push(array[i])
+       }
+   }
+   return arr;
 }
 
 /* ----------------------------------------------------------------------------------
@@ -212,6 +230,26 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+
+   let i = 1
+   let res = []
+
+   while (i <= 10) {
+      num = num + 2
+      if (num === i){
+         break;
+      } else {
+      res.push(num)
+      i++;
+      }   
+   }
+
+
+   if (i < 10) {
+      return "Se interrumpió la ejecución" 
+   } else {
+      return res;
+   }
 }
 
 function continueStatement(num) {
@@ -221,6 +259,24 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+
+  var i = 0;
+  var array = []
+
+  while(i < 10) {
+   
+   
+   if (i === 5){
+      i++;
+      continue;
+   } else {
+      num = num + 2
+      array.push(num)
+      i++;
+   }
+  }
+  return array;
+
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
